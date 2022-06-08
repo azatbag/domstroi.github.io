@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Главная</title>
+	<link rel="stylesheet" type="text/css" href="style/mainPage/adminUiWindows.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<link rel="stylesheet" type="text/css" href="style/buttons.css">
+</head>
+<body>
+	<header>
+	<div><a href='http://domStroi'><img src="style/image/logo.png" height="60px" width="60px"></a></div>
+		<div id="companyName">Dom<span>Stroi</span></div>
+		<div>Admin</div><a class='btn cancleBtn' href='php/logout.php'>Выйти</a>
+	</header>
+	<div id="operationWindow" class="operationWindow hidden"></div>
+	<div class="adminUiWindow">
+		<div class="supportMassagesWindow">
+			<div>Заявок в тех. поддержку: 1</div>
+			<div><div>Имя</div><div>Телефон</div><div>Id объявления</div></div>
+			<div>
+				<div id='2' class="supportMassage" onclick="operationWindowManager($(this))"><div>Ы</div><div>+78005553535</div><div>14</div></div>
+			</div>
+		</div>
+		<a class="btn acceptBtn" href="createAdvert.html">Создать новое объявление</a>
+	</div>
+	<div class="mainUiWindow">
+		<div>
+			<div class='searchWindow'>
+				<div>Тип недвижимости</div>
+				<select id='type'>
+					<option value='%' selected>Любой</option>
+					<option value='new'>Новая квартира</option>
+					<option value='second'>Вторичный рынок</option>
+					<option value='office'>Офис</option>
+				</select>
+				<div>Число комнат</div>
+				<select id='capacity'>
+					<option value='%' selected>Любое</option>
+					<option value='0'>Офис</option>
+					<option value='1'>1-комнатная</option>
+					<option value='2'>2-комнатная</option>
+					<option value='3'>3-комнатная</option>
+					<option value='4'>4-комнатная</option>
+				</select>
+				<div>Стоимость</div>
+				<select id='price'>
+					<option value='%' selected>Любая</option>
+					<option value='1'>0 - 500000</option>
+					<option value='2'>500000 - 1000000</option>
+					<option value='3'>1000000 - 2500000</option>
+					<option value='4'>Более 2500000</option>
+				</select>
+				<div class='btn acceptBtn' onclick='searchAdvert()'>Поиск</div>
+			</div>
+		</div>
+		<div class='advertsWindow'>
+			<a class='advert' href='#'>
+				<div id='picture' style='background-image: url(image/141.jpg)'></div>
+				<div>ы</div>
+				<div>314₽</div>
+				<div>ы</div>
+				<div>ы</div>
+			</a>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src='script/jquery.js'></script>
+<script type="text/javascript" src='script/adminFunctional.js'></script>
